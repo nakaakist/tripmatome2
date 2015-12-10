@@ -1,0 +1,241 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    width: 100%;
+    background-color: #fff;
+    font: 12px/1.5 arial,sans-serif;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input{
+	border:0;
+}
+
+
+.Lywrapper{
+
+}
+
+.Lywrapper .LywrapIn{
+	 width: 100%;
+	 min-width:960px;
+
+}
+
+
+.Lycontents{
+	width: 100%;
+	padding-bottom:20px;
+}
+
+.Lytop{
+	padding-top:41px;
+}
+
+.Lytop .LytopIn{
+       width: 960px;
+       margin: 0 auto;
+       padding-bottom: 15px;
+}
+
+
+.MdHeading{
+	padding-top: 26px;
+    	padding-bottom: 10px;
+    	border-bottom: 3px solid #000;
+}
+
+
+.MdWidget{
+	position: relative;
+    	
+    	line-height: 1.2;
+    	overflow: hidden;
+    	margin: 0 0 10px;
+    	padding: 15px 0 0 5px;
+    	background: url(/matome/img/md/bg_MdMTMWidgetUtil01.png) repeat-x 0 0;
+    	vertical-align: middle;
+}
+
+.MdEditForm{
+	width: 100%;
+}
+
+
+.MdHide{
+	position: absolute;
+    	left: -9999px;
+}
+
+.MdEditForm .MdEditFormBox1{
+	    position: relative;
+    	    height: 41px;
+
+}
+
+.MdEditForm .MdEditFormBox2{
+	    margin-top: 25px;
+}
+
+
+.MdEditForm .MdEditFormItem{
+	    float: left;
+}
+
+
+.MdEditForm .MdEditFormOption{
+	    position: absolute;
+    left: 797px;
+    bottom: 0;
+    line-height: 0;
+}
+
+.MdInputForm{
+
+	width: 757px;
+    min-height: 38px;
+    padding: 0 10px;
+    border: 1px solid #28b937;
+    background-color: #fffeee;
+
+}
+
+.MdInputForm .Mdrequired{
+	     width: 762px;
+    padding: 0;
+    background-position: 5px 10px;
+}
+
+
+.MdInputForm .MdInputFormIn{
+	     display: block;
+
+}
+
+
+.MdInputForm .MdInputFormIntxt{
+	          width: 100%;
+    min-height: 38px;
+    line-height: 38px;
+    background-color: #fffeee;
+    color: #000;
+    font-size: 23px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.MdInputForm .MdInputFormIntxt .Explaceholder{
+
+	     color: #aaa;
+}
+
+.MdWidget .MdWidgetTtl{
+	  width: 0;
+    height: 11px;
+    overflow: hidden;
+    margin: 0 25px 0 0;
+    padding: 0 0 0 81px;
+    background: url("/matome/img/md/sprite_MTMWidget_130522.png") no-repeat 0 -45px;
+}
+
+.MdWidget .MdWidgetList{
+	  display: inline-block;
+}
+
+.MdWidget .MdWidgetList li{
+	  float:left;
+}
+
+.MdWidget .MdWidgetLi{
+	  margin: 0 25px 0 0;
+}
+
+.Lycontents .LycontentsWrap{
+	    background: url("/matome/img/common/bg_lyContentsWrap.png") repeat-y 660px 0;
+	    width: 960px;
+    margin: 0 auto;
+}
+
+.LyMain{
+	float: left;
+    width: 635px;
+    padding-bottom: 40px;
+}
+
+.LySub{
+	position: relative;
+    float: right;
+    width: 300px;
+    padding-bottom: 40px;
+}
+
+.MdMainWidgetList{
+	position: relative;
+    padding-bottom: 1px;
+}
+
+.MdPagination{
+	margin-bottom: 40px;
+	line-height: 1.2;
+    margin: 30px 0;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.MdWidgetBtn{
+	  cursor: pointer;
+    color: #000;
+}
+
+.MdWidgetList li.select{
+	      background-color:#eee;
+}
+
+
+.hide{
+	display:none;
+}
