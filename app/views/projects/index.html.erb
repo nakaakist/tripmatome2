@@ -1,5 +1,15 @@
-<% @articles.each do |article| %>
+<p id="notice"><%= notice %></p>
 
-<%= article.article_text  %>
+<% @projects.each do |project| %>
+
+<%= project.article_text  %><br>
+<%= link_to 'Show', project_path(project) %>
+
+<%= link_to 'Edit', edit_project_path(project) %>
+<%= link_to 'Destroy', project_path(project), method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <% end %>
+
+<%=link_to 'New', new_project_path  %>
+
+

@@ -1,10 +1,10 @@
-<%= form_for @article, :url => {:action => :index} do |f|  %>
- <% if @article.errors.any?  %>
+<%= form_for(@project) do |f|  %>
+ <% if @project.errors.any?  %>
    <div id="error_explanation">
      <h2><%= pluralize(@article.error.count, "error")  %>prohibited this article from being saved</h2>
 
      <ul>
-       <% @article.error.full_messages.each do |msg|  %>
+       <% @project.error.full_messages.each do |msg|  %>
          <li><%= msg  %></li>  
        <% end  %>
      </ul>
@@ -14,11 +14,11 @@
 
  <div class="field">
    <%= f.label:text  %><br>
-   <%= f.text_field:article_text  %>
+   <%= f.text_area:article_text  %>
  </div>
 
  <div class="action">
-   <%= f.submit  %>
+   <%= f.submit  'Make article' %>
  </div>
 
 <% end  %>

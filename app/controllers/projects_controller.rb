@@ -1,49 +1,66 @@
 class ProjectsController < ApplicationController
+      before_action :set_project, only: [:show, :edit, :update, :destroy]
 
       def index
-      	  @articles = Article.all
+      	  @projects = Project.all
       end
 
       def new
-      	  @article = Article.new
+      	  @project = Project.new
+      end
+
+      def show
       end	  
+
+      def edit
+      end
 
 
       def create
-      	  @article = Article.new(article_params)
+      	  @project = Project.new(project_params)
 	  respond_to do |format|
-	    if @article.save
-	      format.html{redirect_to action:'index', notice:'Article was successfully created'}
-	      format.json{render :show, status: :created, location: @article}
+	    if @project.save
+	      format.html{redirect_to projects_path, notice:'Article was successfully created'}
+	      format.json{render :show, status: :created, location: @project}
 	    else
 	      format.html{render action: 'new'}
-	      format.json{render json: @book.errors, status: unprocessable_entity}   
+	      format.json{render json: @project.errors, status: unprocessable_entity}   
 	    end
 	  end  
       end	  
 
       def update
+      	  
       	  respond_to do |format|
-      	  	     if @article.update(article_params)
-        	     format.html { redirect_to @article, notice: 'Article was successfully updated\
-.' }
-			format.json { render :show, status: :ok, location: @article }
-      			else
-        		format.html { render :edit }
-        		format.json { render json: @article.errors, status: :unprocessable_entity \
-}
+      	      if @project.update(project_params)
+                  format.html { redirect_to projects_path, notice: 'Article was successfully updated.' }
+	          format.json { render :show, status: :ok, location: @project }
+      	      else
+                  format.html { render :edit }
+        	  format.json { render json: @project.errors, status: :unprocessable_entity }
 	   end
     	end
+     end
+
+     def destroy
+        @project.destroy
+	respond_to do |format|
+	  format.html { redirect_to projects_path, notice: 'User was successfully destroyed.' }
+	  format.json { head :no_content }
+	end  
      end
 
 
 
 
-
-
  private
-     def article_params
-     	 params.require(:article).permit(:article_text)
+     def set_project
+       @project = Project.find(params[:id])
+     end     
+
+
+     def project_params
+     	 params.require(:project).permit(:article_text)
      end
 
 
