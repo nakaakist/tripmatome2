@@ -1,0 +1,11 @@
+<h1>
+  Change my account info
+</h1>
+<%= form_for @user, url: :account do |form| %>
+Nickname: <%= form.text_field :nickname %><br>
+Email: <%= form.text_field :email %><br>
+About me: <%= form.text_field :introduction %><br>
+Profile image: <%= form.text_field :image_url %><br>
+<%= form.submit %><br>
+<% end %>
+<%= link_to 'Back', :account %>

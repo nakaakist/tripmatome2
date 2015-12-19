@@ -1,0 +1,9 @@
+<h1>
+  My account
+</h1>
+<%= image_tag @user.image_url %><br>
+Nickname: <%= @user.nickname %><br>
+Email: <%= @user.email %><br>
+Account type: <%= @user.provider %><br>
+About me: <%= @user.introduction %><br>
+<%= link_to 'edit', :edit_account %>
