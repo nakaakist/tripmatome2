@@ -1,0 +1,9 @@
+<h1>
+  ok
+</h1>
+<% @users.each do |user|%>
+<p>
+  <%= link_to user.nickname, user %>
+  <%= user.email %>
+</p>
+<% end %>
