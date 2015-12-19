@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
   resources :users, only: [:index, :show]
-  resource :account, only: [:show, :update, :edit]
+  resource :account, only: [:show, :update, :edit, :destroy]
   get '/auth/:provider/callback' => 'sessions#create'
   get '/logout' => 'sessions#destroy', as: :logout
 

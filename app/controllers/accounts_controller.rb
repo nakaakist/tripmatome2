@@ -19,4 +19,9 @@ class AccountsController < ApplicationController
     end
   end
 
+  def destroy
+    @current_user.destroy
+    session[:user_id] = nil
+    redirect_to root_path, notice: 'Account deleted'
+  end
 end

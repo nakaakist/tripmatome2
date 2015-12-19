@@ -6,4 +6,5 @@ Nickname: <%= @user.nickname %><br>
 Email: <%= @user.email %><br>
 Account type: <%= @user.provider %><br>
 About me: <%= @user.introduction %><br>
-<%= link_to 'edit', :edit_account %>
+<%= link_to 'edit', :edit_account %><br>
+<%= link_to 'delete account', account_path, method: :delete, data: { confirm: "You sure?" } %>
