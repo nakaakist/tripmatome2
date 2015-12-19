@@ -7,7 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<body>
+<div>
+  <% if current_user %>
+    Signed in as <strong><%= current_user.nickname %></strong>!
+    <%= link_to "Sign out", logout_path, id: "sign_out" %>
+  <% else %>
+    <%= link_to "Sign in with Twitter", "/auth/twitter", id: "sign_in" %>
+  <% end %>
+</div>
 <%= yield %>
 
 </body>
