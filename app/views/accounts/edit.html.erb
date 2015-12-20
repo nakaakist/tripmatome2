@@ -2,10 +2,24 @@
   Change my account info
 </h1>
 <%= form_for @user, url: :account do |form| %>
-Nickname: <%= form.text_field :nickname %><br>
-Email: <%= form.text_field :email %><br>
-About me: <%= form.text_field :introduction %><br>
-Profile image: <%= form.text_field :image_url %><br>
-<%= form.submit %><br>
+<table class="table">
+  <tr>
+    <td>Nickname</td>
+    <td><%= form.text_field :nickname %></td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><%= form.text_field :email %></td>
+  </tr>
+  <tr>
+    <td>About me</td>
+    <td><%= form.text_field :introduction %></td>
+  </tr>
+  <tr>
+    <td>Profile image</td>
+    <td><%= form.text_field :image_url %></td>
+  </tr>
+</table>
+<%= form.submit "Update", class: "btn btn-lg btn-primary" %>
+<%= link_to 'Back', :account, class: "btn btn-lg btn-primary" %>
 <% end %>
-<%= link_to 'Back', :account %>

@@ -1,10 +1,24 @@
 <h1>
   My account
 </h1>
-<%= image_tag @user.image_url %><br>
-Nickname: <%= @user.nickname %><br>
-Email: <%= @user.email %><br>
-Account type: <%= @user.provider %><br>
-About me: <%= @user.introduction %><br>
-<%= link_to 'edit', :edit_account %><br>
-<%= link_to 'delete account', account_path, method: :delete, data: { confirm: "You sure?" } %>
+<%= image_tag @user.image_url %>
+<table class="table">
+  <tr>
+    <td>Nickname</td>
+    <td><%= @user.nickname %></td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr>
+    <td>Account type</td>
+    <td><%= @user.provider %></td>
+  </tr>
+  <tr>
+    <td>About me</td>
+    <td><%= @user.introduction %></td>
+  </tr>
+</table>
+<%= link_to 'Edit', :edit_account, class: "btn btn-lg btn-primary" %>
+<%= link_to 'Delete account', account_path, method: :delete, data: { confirm: "You sure?" } ,class: "btn btn-lg btn-danger" %>

@@ -1,2 +1,7 @@
-<h1>Trip Matome</h1>
-<p>This is home</p>
+<div class="center jumbotron">
+  <h1>Trip Matome</h1>
+  <p>This is home</p>
+  <% unless @login %>
+  <%= link_to "Sign in with Twitter", "/auth/twitter", class: "btn btn-lg btn-primary" %>
+  <% end %>
+</div>

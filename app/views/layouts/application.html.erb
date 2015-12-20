@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Tripmatome2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div>
-    <% if current_user %>
-    Signed in as <strong><%= current_user.nickname %></strong>&nbsp;
+  <head>
+    <title>Tripmatome2</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <% flash.each do |key, value| %>
+    <div class="alert alert-info">
+      <%= content_tag(:div, value, class: "alert") %>
+    </div>
     <% end %>
-    <%= link_to "Home", root_path  %>&nbsp;
-    <% if current_user %>
-    <%= link_to "My account", account_path  %>&nbsp;
-    <%= link_to "Sign out", logout_path, id: "sign_out" %>
-    <% else %>
-    <%= link_to "Sign in with Twitter", "/auth/twitter", id: "sign_in" %>
-    <% end %>
-  </div>
-  <% flash.each do |key, value| %>
-  <%= content_tag(:div, value, class: "#{key}") %>
-  <% end %>
-  <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
 </body>
 </html>
