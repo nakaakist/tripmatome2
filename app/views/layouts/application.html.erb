@@ -9,7 +9,7 @@
 <body>
   <div>
     <% if current_user %>
-    Signed in as <strong><%= current_user.nickname %></strong>!&nbsp;
+    Signed in as <strong><%= current_user.nickname %></strong>&nbsp;
     <% end %>
     <%= link_to "Home", root_path  %>&nbsp;
     <% if current_user %>
@@ -19,6 +19,9 @@
     <%= link_to "Sign in with Twitter", "/auth/twitter", id: "sign_in" %>
     <% end %>
   </div>
+  <% flash.each do |key, value| %>
+  <%= content_tag(:div, value, class: "#{key}") %>
+  <% end %>
   <%= yield %>
 </body>
 </html>
